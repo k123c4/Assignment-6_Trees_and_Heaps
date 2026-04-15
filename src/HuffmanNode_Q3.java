@@ -1,10 +1,10 @@
-public class HuffmanNode {
+public class HuffmanNode_Q3 {
         char data;
         int frequency;
-        HuffmanNode left;
-        HuffmanNode right;
+        HuffmanNode_Q3 left;
+        HuffmanNode_Q3 right;
 
-        public HuffmanNode(char data, int frequency) {
+        public HuffmanNode_Q3(char data, int frequency) {
             this.data = data;
             this.frequency = frequency;
             this.left = null;

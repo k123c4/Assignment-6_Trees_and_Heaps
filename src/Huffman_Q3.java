@@ -1,12 +1,12 @@
 import java.util.*;
 
-public class Huffman {
+public class Huffman_Q3 {
     private Map<Character, Integer> freqMap;
     private Map<Character, String> charToCode;
-    private HuffmanNode root;
+    private HuffmanNode_Q3 root;
     private String encodedString;
 
-    public Huffman() {
+    public Huffman_Q3() {
         freqMap = new HashMap<>();
         charToCode = new HashMap<>();
     }
@@ -25,19 +25,19 @@ public class Huffman {
     }
 
     public void buildHuffman() {
-        List<HuffmanNode> nodeList = new ArrayList<>();
+        List<HuffmanNode_Q3> nodeList = new ArrayList<>();
         for (Map.Entry<Character, Integer> entry : freqMap.entrySet()) {
-            nodeList.add(new HuffmanNode(entry.getKey(), entry.getValue()));
+            nodeList.add(new HuffmanNode_Q3(entry.getKey(), entry.getValue()));
         }
 
         while (nodeList.size() > 1) {
             int firstMinIndex = findMinIndex(nodeList);
-            HuffmanNode left = nodeList.remove(firstMinIndex);
+            HuffmanNode_Q3 left = nodeList.remove(firstMinIndex);
 
             int secondMinIndex = findMinIndex(nodeList);
-            HuffmanNode right = nodeList.remove(secondMinIndex);
+            HuffmanNode_Q3 right = nodeList.remove(secondMinIndex);
 
-            HuffmanNode parent = new HuffmanNode('\0', left.frequency + right.frequency);
+            HuffmanNode_Q3 parent = new HuffmanNode_Q3('\0', left.frequency + right.frequency);
             parent.left = left;
             parent.right = right;
             nodeList.add(parent);
@@ -48,7 +48,7 @@ public class Huffman {
         }
     }
 
-    private int findMinIndex(List<HuffmanNode> list) {
+    private int findMinIndex(List<HuffmanNode_Q3> list) {
         int minIndex = 0;
         for (int i = 1; i < list.size(); i++) {
             if (list.get(i).frequency < list.get(minIndex).frequency) {
@@ -65,7 +65,7 @@ public class Huffman {
         }
     }
 
-    private void generateRecursive(HuffmanNode node, String code) {
+    private void generateRecursive(HuffmanNode_Q3 node, String code) {
         if (node.left == null && node.right == null) {
             charToCode.put(node.data, code);
             return;

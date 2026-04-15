@@ -1,4 +1,4 @@
-public class EncryptedTree {
+public class EncryptedTree_Q4 {
 
     public boolean findElement(int[] bt, int t) {
         if (bt == null || bt.length == 0) {
@@ -41,7 +41,7 @@ public class EncryptedTree {
     }
 
     public static void main(String[] args) {
-        EncryptedTree solver = new EncryptedTree();
+        EncryptedTree_Q4 solver = new EncryptedTree_Q4();
 
 
         int[] bt = {-2, -1};

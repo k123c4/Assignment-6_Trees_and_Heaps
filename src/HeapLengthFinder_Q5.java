@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class HeapLengthFinder {
+public class HeapLengthFinder_Q5 {
 
     public void findAllLess(String[] s, int x) {
         if (s == null || s.length == 0) {
@@ -35,7 +35,7 @@ public class HeapLengthFinder {
 
 
     public static void main(String[] args) {
-        HeapLengthFinder finder = new HeapLengthFinder();
+        HeapLengthFinder_Q5 finder = new HeapLengthFinder_Q5();
 
         String[] s = {"zero", "size", "nutella", "jojo", "luna", "isse", "astor", "as", "entretien", "", "cal"};
         int x = 3;

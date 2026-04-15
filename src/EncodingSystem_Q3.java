@@ -1,12 +1,12 @@
 import java.util.*;
 
-public class EncodingSystem {
-    private Huffman huffman;
+public class EncodingSystem_Q3 {
+    private Huffman_Q3 huffman;
     private List<String> originalTexts;
     private List<String> encodedStrings;
 
-    public EncodingSystem() {
-        this.huffman = new Huffman();
+    public EncodingSystem_Q3() {
+        this.huffman = new Huffman_Q3();
         this.originalTexts = new ArrayList<>();
         this.encodedStrings = new ArrayList<>();
     }
@@ -49,7 +49,7 @@ public class EncodingSystem {
     }
 
     public static void main(String[] args) {
-        EncodingSystem system = new EncodingSystem();
+        EncodingSystem_Q3 system = new EncodingSystem_Q3();
         String[] texts = {"marcus fenix is a gear"};
         system.initialize(texts);
 
